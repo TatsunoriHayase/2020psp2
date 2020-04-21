@@ -45,3 +45,6 @@ int main(void)
 
 }
 
+extern double ave_online(double val,double ave)
+ave=
+
