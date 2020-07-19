@@ -7,7 +7,7 @@ extern double ave_online(double val,double ave,int n)
 extern double var_online(double val,double ave,double squere_ave,int n)
 int main(void)
 {
-    double val,ave,squere_ave,ave_n1=0;
+    double val,var,ave,squere_ave,ave_n1=0,gosa,huhen;
     char fname[FILENAME_MAX];
     char buf[256];
     FILE* fp;
@@ -31,10 +31,10 @@ int main(void)
     var=var_online(val,ave_n1,squere_ave_n1);
     ave_n1=ave;
     n=n+1;
-    
-
-
     }
+    huhen=n*var/(n-1);
+    gosa=pow(huhen/n,0.5);
+    
 
     if(fclose(fp) == EOF){
         fputs("file close error\n",stderr);
