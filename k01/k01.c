@@ -40,8 +40,10 @@ int main(void)
         fputs("file close error\n",stderr);
         exit(EXIT_FAILURE);
     }
-
-
+    printf("sample mean=%lf\n",ave);
+    printf("sample variance=%lf\n",var);
+    printf("population mean=%lf,  pm=%lf\n"ave,gosa);
+    printf("population variance=%lf\n",huhen);
     return 0;
 
 
