@@ -3,11 +3,11 @@
 #include <string.h>
 #include <math.h>
 
-extern double ave_online(double val,double ave,int n)
-extern double var_online(double val,double ave,double squere_ave,int n)
+extern double ave_online(double val,double ave,int n);
+extern double var_online(double val,double ave,double squere_ave,int n);
 int main(void)
 {
-    double val,var,ave,squere_ave,ave_n1=0,gosa,huhen;
+    double val,var,ave,squere_ave,squere_ave_n1,ave_n1=0,gosa,huhen;
     char fname[FILENAME_MAX];
     char buf[256];
     FILE* fp;
@@ -26,9 +26,9 @@ int main(void)
 
     while(fgets(buf,sizeof(buf),fp) != NULL){
         sscanf(buf,"%lf",&val);
-    ave=ave_online(val,ave_n1);
-    squere_ave=ave_online(val*val,ave_n1)
-    var=var_online(val,ave_n1,squere_ave_n1);
+    ave=ave_online(n,val,ave_n1,n);
+    squere_ave=ave_online(val*val,ave_n1,n);
+    var=var_online(val,ave_n1,squere_ave_n1,n);
     ave_n1=ave;
     n=n+1;
     }
