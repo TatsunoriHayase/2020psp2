@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#define _USE_MATH_DEFINES
 #include <math.h>
 #ifdef CONST_SEED
 #define RAND_SEED 2020
@@ -15,21 +16,21 @@ extern double r_stdnorm(void);
 int main(int argc, char* argv[])
 {
     int num_dummy;
-    int mu;
-    int sigma;
+    double mu;
+    double sigma;
     int i;
     double dummy;
 
-    mu=argv[1];
-    sigma=argv[2];
-    num_dummy=argv[3];
+
+
+    
 
     printf("============================================\n");
-    sscanf("%lf",&argv[1]);
+    sscanf(argv[1],"%lf",&mu);
     printf("template mean: %4.1lf\n",mu);
-    sscanf("%lf",&argv[2]);
+    sscanf(argv[2],"%lf",&sigma);
     printf("template standard deviation: %3.2lf\n",sigma);
-    sscanf("%lf",&argv[3]);
+    sscanf(argv[3],"%lf",&num_dummy);
     printf("Num of dummy data: %d\n",num_dummy);
     printf("============================================\n");
 
@@ -49,6 +50,6 @@ double r_unif(void)
 }
 
 double r_stdnorm(void)
-{   double M_PI=3.14;
+{   
     return sqrt( -2.0*log(r_unif()) ) * sin( 2.0*M_PI*r_unif() );
 }

@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
-
+#define _USE_MATH_DEFINES
 extern double p_stdnorm(double z);
 #define MU_A 170.8
 #define MU_B 169.9
@@ -56,7 +56,7 @@ int main(void)
 }
 
 double p_stdnorm(double z)
-{   double M_PI=3.14;
+{   
     return 1/sqrt(2*M_PI) * exp(-z*z/2);
 }
 
