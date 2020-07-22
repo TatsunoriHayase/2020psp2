@@ -52,10 +52,10 @@ bb35319035 林瀨龍紀
 ```
 input the filename of sample:../sample/heights_male.csv
 the filename of sample: ../sample/heights_male.csv
-sample mean：
-sample variance：
-population mean (estimated)：
-population variance (estimated)：
+sample mean：173.888750
+sample variance：25.361711
+population mean (estimated)：173.888750 pm=1.903445
+population variance (estimated)：28.984813
 ```
 
 ## 修正履歴

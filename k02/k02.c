@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <math.h>
 #define _USE_MATH_DEFINES
+#include <math.h>
 extern double p_stdnorm(double z);
 #define MU_A 170.8
 #define MU_B 169.9

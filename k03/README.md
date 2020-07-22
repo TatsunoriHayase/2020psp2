@@ -88,6 +88,16 @@ Num of dummy data: 5
 
 コンパイル時に`-DCONST_SEED`をつけない場合を以下に示す．
 
+template mean: 170.8
+template standard deviation: 5.43
+Num of dummy data: 5
+
+159.97
+172.04
+173.93
+173.14
+165.73
+
 
 
 ## 修正履歴

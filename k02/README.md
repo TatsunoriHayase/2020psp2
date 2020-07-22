@@ -27,8 +27,8 @@ bb35319035 林瀨龍紀
 ## 入出力結果
 
 ```
-Likelihood for A：
-Likelihood for B：
+Likelihood for A：0.000006
+Likelihood for B：0.000002
 ```
 
 ## 修正履歴
