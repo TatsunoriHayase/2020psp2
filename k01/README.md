@@ -41,6 +41,7 @@ bb35319035 林瀨龍紀
 |母集団分散|<img src="/k01/tex/35ae058b877f36e7384685a2e19cb7e4.svg?invert_in_darkmode&sanitize=true" align=middle width=37.44306224999999pt height=21.18721440000001pt/>|
 
 ## ソースコードの説明
+
 6,50~53 標本の平均を求める関数
 7,54~57 標本の分散を求める関数
 29      関数で平均を求める
