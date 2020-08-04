@@ -3,13 +3,13 @@
 #include<stdlib.h>
 #include<math.h>
 
-
+#define N 256
 
 
 struct D{double ID;int gender;double height;};
 int main(void)
 {
-    int i,n;
+    int i,data_exist;
     double val,id,ID;
     char fname[FILENAME_MAX];
     char fname2[FILENAME_MAX];
@@ -17,9 +17,9 @@ int main(void)
     char buf2[256];
     FILE* fp,*fp2;
     int gender,num_male,num_female,num_unknoown,num_whole;
-    struct D date[14];
+    struct D date[N];
     i=-1;
-    n=0;
+    data_exist=0;
 
     printf("input the filename of sample height:");
     fgets(fname,sizeof(fname),stdin);
@@ -69,11 +69,12 @@ num_whole = num_male+num_female+num_unknoown;
 printf("Which ID's data do you want?:\n");
 scant("%lf",&id);
 
+i=0;
 while(fgets(buf2,sizeof(buf2),fp2) !=NULL)
 {
     sscanf(buf2,"%lf",&ID);
     i++;
-    date[1].ID=ID;
+    date[i].ID=ID;
 }
 for(i=1;i<=num_whole;i++)
 {
@@ -90,10 +91,10 @@ for(i=1;i<=num_whole;i++)
             printf("female\n");
         }
         printf("height:%1lf\n",date[i].height);
-        n=1;
+        data_exist=1;
     }
 }
-if(n==0){
+if(data_exist==0){
             printf("No date\n");
         }
 return 0;
