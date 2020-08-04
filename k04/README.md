@@ -46,3 +46,5 @@ No data
 
 ## 修正履歴
 
+[comment #20200804 sonoda]
+-OKです．課題4完了
