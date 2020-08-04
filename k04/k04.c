@@ -67,7 +67,7 @@ int main(void)
 num_whole = num_male+num_female+num_unknoown;
 
 printf("Which ID's data do you want?:\n");
-scant("%lf",&id);
+scanf("%lf",&id);
 
 i=0;
 while(fgets(buf2,sizeof(buf2),fp2) !=NULL)
